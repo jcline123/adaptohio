@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adapt Ohio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f9fc;
+      color: #2c3e50;
+    }
+    header {
+      background-color: #3b82f6;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .intro {
+      margin-bottom: 2rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adapt Ohio</h1>
+    <p>A family-built guide for navigating life with a child with a disability</p>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p>
+        We're the parents of a little girl named Gwendolyn, who was born with fibular hemimelia and apodia. At 9 months old, she underwent amputation surgeries and now walks, runs, and plays as a bilateral below-knee amputee. When she was born, we had so many questions—and very few answers. No one handed us a guide.
+      </p>
+      <p>
+        This site is our way of sharing everything we've learned so far—about early intervention, adaptive sports, accessible parks, and more. While our experience is specific to limb differences, many of these resources apply to families of children with a wide range of disabilities. We hope Adapt Ohio helps make your journey a little easier.
+      </p>
+    </section>
+
+    <section class="card-grid">
+      <a class="card" href="first-steps.html">
+        <h3>First Steps</h3>
+        <p>Where to begin after a diagnosis or birth—programs, referrals, and support systems to connect with early.</p>
+      </a>
+      <a class="card" href="sports.html">
+        <h3>Sports & Activities</h3>
+        <p>Explore sled hockey, dance, and other adaptive programs we've tried and loved.</p>
+      </a>
+      <a class="card" href="groups.html">
+        <h3>Groups & Community</h3>
+        <p>Support groups, local events, and helpful online communities to join.</p>
+      </a>
+      <a class="card" href="playgrounds.html">
+        <h3>Accessible Playgrounds</h3>
+        <p>Our favorite inclusive playgrounds in Central Ohio that encourage every child to play freely.</p>
+      </a>
+      <a class="card" href="camps.html">
+        <h3>Camps & Programs</h3>
+        <p>Opportunities for fun, growth, and independence at every age.</p>
+      </a>
+      <a class="card" href="vacations.html">
+        <h3>Travel & Vacations</h3>
+        <p>Tips and insights from visiting theme parks, zoos, and planning family trips with accessibility in mind.</p>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
