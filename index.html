@@ -6,49 +6,76 @@
   <title>Adapt Ohio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --blue: #2563eb;
+      --light-blue: #3b82f6;
+      --gray-bg: #f0f4f8;
+      --card-border: #e2e8f0;
+      --text-dark: #1e293b;
+      --text-light: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f0f4f8;
-      color: #2c3e50;
+      background-color: var(--gray-bg);
+      color: var(--text-dark);
     }
+
     header {
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      background: linear-gradient(135deg, var(--light-blue), var(--blue));
       color: white;
-      padding: 3rem 1rem;
+      padding: 4rem 1rem;
       text-align: center;
     }
+
     header h1 {
       margin: 0 0 1rem 0;
-      font-size: 2.75rem;
+      font-size: 3rem;
     }
+
     header p {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
-    .container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
     }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+    }
+
     .intro {
       margin-bottom: 3rem;
       line-height: 1.6;
+      font-size: 1.1rem;
+      color: var(--text-light);
     }
+
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
+
     .card {
       background: white;
       padding: 1.75rem;
       border-radius: 12px;
-      border: 1px solid #d1d5db;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.03);
       transition: all 0.2s ease-in-out;
       text-decoration: none;
       color: inherit;
@@ -56,19 +83,22 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
     }
+
     .card h3 {
       margin-top: 0;
-      color: #2563eb;
+      color: var(--blue);
       font-size: 1.25rem;
     }
+
     .card p {
       margin-bottom: 0;
       font-size: 1rem;
-      color: #374151;
+      color: var(--text-light);
     }
   </style>
 </head>
@@ -78,42 +108,44 @@
     <p>A family-built guide for navigating life with a child with a disability</p>
   </header>
 
-  <main class="container">
-    <section class="intro">
-      <p>
-        We're the parents of a little girl named Gwendolyn, who was born with fibular hemimelia and apodia. At 9 months old, she had amputation surgeries and now walks, runs, and plays as a bilateral below-knee amputee. When she was born, we had so many questions and very few answers. No one handed us a guide.
-      </p>
-      <p>
-        This site is where we're sharing what we've learned so far: from early intervention and adaptive sports to accessible parks and programs. While our experience centers on limb differences, many of these resources will be helpful to families of children with various disabilities. Our hope is that this guide makes your path a little clearer.
-      </p>
-    </section>
+  <div class="wrapper">
+    <main class="container">
+      <section class="intro">
+        <p>
+          We're the parents of a little girl named Gwendolyn, who was born with fibular hemimelia and apodia. At 9 months old, she had amputation surgeries and now walks, runs, and plays as a bilateral below-knee amputee. When she was born, we had so many questions and very few answers. No one handed us a guide.
+        </p>
+        <p>
+          This site is where we're sharing what we've learned so far: from early intervention and adaptive sports to accessible parks and programs. While our experience centers on limb differences, many of these resources will be helpful to families of children with various disabilities. Our hope is that this guide makes your path a little clearer.
+        </p>
+      </section>
 
-    <section class="card-grid">
-      <a class="card" href="first-steps.html">
-        <h3>First Steps</h3>
-        <p>What to do after a diagnosis or birth. Programs, referrals, and support systems to connect with early.</p>
-      </a>
-      <a class="card" href="sports.html">
-        <h3>Sports & Activities</h3>
-        <p>Explore sled hockey, dance, and other adaptive programs we've tried and recommend.</p>
-      </a>
-      <a class="card" href="groups.html">
-        <h3>Groups & Community</h3>
-        <p>Support groups, local meetups, and online communities that have helped us stay connected.</p>
-      </a>
-      <a class="card" href="playgrounds.html">
-        <h3>Accessible Playgrounds</h3>
-        <p>Our favorite inclusive playgrounds in Central Ohio where every child can feel included.</p>
-      </a>
-      <a class="card" href="camps.html">
-        <h3>Camps & Programs</h3>
-        <p>Fun and empowering summer and seasonal camps your child might enjoy.</p>
-      </a>
-      <a class="card" href="vacations.html">
-        <h3>Travel & Vacations</h3>
-        <p>Tips and insights for visiting theme parks, zoos, and planning accessible family trips.</p>
-      </a>
-    </section>
-  </main>
+      <section class="card-grid">
+        <a class="card" href="first-steps.html">
+          <h3>First Steps</h3>
+          <p>What to do after a diagnosis or birth. Programs, referrals, and support systems to connect with early.</p>
+        </a>
+        <a class="card" href="sports.html">
+          <h3>Sports & Activities</h3>
+          <p>Explore sled hockey, dance, and other adaptive programs we've tried and recommend.</p>
+        </a>
+        <a class="card" href="groups.html">
+          <h3>Groups & Community</h3>
+          <p>Support groups, local meetups, and online communities that have helped us stay connected.</p>
+        </a>
+        <a class="card" href="playgrounds.html">
+          <h3>Accessible Playgrounds</h3>
+          <p>Our favorite inclusive playgrounds in Central Ohio where every child can feel included.</p>
+        </a>
+        <a class="card" href="camps.html">
+          <h3>Camps & Programs</h3>
+          <p>Fun and empowering summer and seasonal camps your child might enjoy.</p>
+        </a>
+        <a class="card" href="vacations.html">
+          <h3>Travel & Vacations</h3>
+          <p>Tips and insights for visiting theme parks, zoos, and planning accessible family trips.</p>
+        </a>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
