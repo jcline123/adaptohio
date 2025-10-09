@@ -99,6 +99,67 @@
       color: #64748b; /* soft gray */
       margin-top: 0.5rem;
     }
+  /* --- Adaptive Cycling callout box and media collage --- */
+  .callout-box {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f9fbff;
+    padding: 1.25rem;
+    margin: 2rem 0;
+  }
+
+  .callout-box h2 {
+    margin-top: 0;
+  }
+
+  .callout-box .byline {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+  }
+
+  .media-collage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "video side"
+      "photo side";
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .media-collage figure {
+    margin: 0;
+  }
+
+  .media-collage .big-video { grid-area: video; }
+  .media-collage .big-photo { grid-area: photo; }
+  .media-collage .side-stack { grid-area: side; display: grid; gap: 1rem; }
+
+  .media-collage img,
+  .media-collage video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: block;
+  }
+
+  .media-collage .caption {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .media-collage {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "video"
+        "photo"
+        "side";
+    }
+  }
   </style>
 </head>
 <body>
@@ -162,6 +223,54 @@
         <img src="images/soccer.JPEG" alt="Gwen holding her trophy on the last day of TOPSoccer in Prairie Township, Ohio">
         <p class="caption">Last day of spring TOPSoccer</p>
       </div>
+
+      <!-- Adaptive Cycling: Magnetic Pedals -->
+      <section class="callout-box" id="adaptive-cycling">
+        <h2>Adaptive Cycling: Magnetic Pedals That Helped Gwen</h2>
+        <p class="byline">Parent-tested tip, shared with thanks to <a href="https://hustlebikelabs.com/" target="_blank" rel="noopener">Hustle Bike Labs</a></p>
+
+        <p>
+          When Gwen started riding, keeping her feet on the pedals was hard. Our bike shop suggested toe cages and those helped a lot. She could ride, but setting her feet and stepping off was tricky. At Camp No Limits we met an amputee who told us about Hustle’s magnetic pedals. They are made for adults who use cycling shoes with a metal plate. I emailed Hustle to ask if a piece of metal in a kid shoe would work through the sole. They tested the idea and mailed us magnetic shoe inserts and pedals to try. The magnets keep Gwen’s foot centered and steady, and she can still lift off quickly when she needs to put a foot down. It has been a better solution than cages for her. We are very grateful to Hustle and we recommend them.
+        </p>
+
+        <!-- Media collage: big video + big photo, small side images -->
+        <div class="media-collage" aria-label="Photos and video of Gwen's adaptive cycling setup">
+    
+          <!-- Big video -->
+          <figure class="big-video">
+            <video autoplay muted loop playsinline preload="metadata" poster="images/GwenwithBike.JPEG">
+              <source src="images/BikeRide.MP4" type="video/mp4">
+              Sorry, your browser does not support embedded videos.
+            </video>
+            <figcaption class="caption">Short ride clip. The magnetic pedals help Gwen keep her feet steady while she starts and stops.</figcaption>
+          </figure>
+
+          <!-- Big photo: Gwen with bike -->
+          <figure class="big-photo">
+            <img src="images/GwenwithBike.JPEG"
+                 loading="lazy"
+                 alt="Gwen smiling next to her bright yellow Trek bike. She is wearing her prosthetic legs and pink shoes. The bike has purple magnetic pedals installed.">
+            <figcaption class="caption">Gwen with her bike at home. Purple Hustle pedals are installed.</figcaption>
+          </figure>
+
+          <!-- Side stack: smaller images -->
+          <div class="side-stack">
+            <figure>
+              <img src="images/ShoeInsert.JPEG"
+                   loading="lazy"
+                   alt="Pair of pink kids sneakers next to two gray magnetic shoe inserts on a wood table">
+              <figcaption class="caption">Magnetic shoe inserts that sit under the insole.</figcaption>
+            </figure>
+
+            <figure>
+              <img src="images/MagneticPedals.JPEG"
+                   loading="lazy"
+                   alt="Close up of purple Hustle Bike Labs magnetic pedals mounted on a child's bike with training wheels">
+              <figcaption class="caption">Close view of the magnetic pedals on the crank.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
       <h2>Adaptive Sports Connection</h2>
       <p>
