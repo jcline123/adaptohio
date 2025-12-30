@@ -80,6 +80,52 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     .caption { font-size: 0.9rem; color: #64748b; margin-top: 0.5rem; }
+    /* --- Budsies collage (mirrors sports.html collage approach) --- */
+    .photo-collage {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "main side"
+        "main side";
+      gap: 1rem;
+      margin: 1.25rem 0 0;
+    }
+
+    .photo-collage figure {
+      margin: 0;
+    }
+
+    .photo-collage .main-photo { grid-area: main; }
+
+    .photo-collage .side-stack {
+      grid-area: side;
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .photo-collage img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: block;
+    }
+
+    .photo-collage .caption {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 720px) {
+      .photo-collage {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "main"
+          "side";
+      }
+    }
   </style>
 </head>
 <body>
@@ -143,6 +189,37 @@
       <p>
         For kids with limb differences, it’s a simple way to have a toy that truly represents them. You can include any detail you’d like, and the finished doll comes back soft, friendly, and personal. It’s one of those ideas that seems small but can mean a lot when a child sees themselves reflected in something they can hold.
       </p>
+
+      <!-- Budsies photo collage -->
+      <div class="photo-collage" aria-label="Budsies custom doll photos">
+
+        <!-- Main (large) photo -->
+        <figure class="main-photo">
+          <img src="images/budsies-full.jpg"
+               loading="lazy"
+               alt="Custom Budsies “Selfies” doll with prosthetic legs">
+          <figcaption class="caption">Custom Budsies “Selfies” doll with prosthetic legs.</figcaption>
+        </figure>
+
+        <!-- Right column (stacked) photos -->
+        <div class="side-stack">
+
+          <figure>
+            <img src="images/budsies-legs.jpg"
+                 loading="lazy"
+                 alt="Close-up details on the prosthetics">
+            <figcaption class="caption">Close-up details on the prosthetics.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/budsies-side.jpg"
+                 loading="lazy"
+                 alt="Side view of the removable prosthetic legs">
+            <figcaption class="caption">Side view of the removable prosthetic legs.</figcaption>
+          </figure>
+
+        </div>
+      </div>
 
       <h3>Autumn (LEGO Friends)</h3>
       <p>
