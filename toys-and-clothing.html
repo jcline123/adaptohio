@@ -126,6 +126,32 @@
           "side";
       }
     }
+
+    /* --- 4-photo grid for DIY sections --- */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 1.25rem 0 0;
+    }
+
+    .photo-grid figure {
+      margin: 0;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: block;
+    }
+
+    @media (max-width: 720px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
