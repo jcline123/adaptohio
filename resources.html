@@ -32,12 +32,13 @@
     a:hover { text-decoration:underline; }
     p { line-height:1.6; color:var(--text-light); }
   </style>
+  <link rel="stylesheet" href="interior.css">
 </head>
-<body>
+<body id="top">
   <header><h1>Support & Community Resources</h1></header>
   <div class="wrapper">
     <main class="container">
-      <a class="back-button" href="index.html" style="display:inline-block;margin-bottom:1.5rem;background-color:#2563eb;color:white;padding:0.5rem 1.25rem;border-radius:6px;text-decoration:none;font-size:0.95rem;">← Back to Home</a>
+      <a class="back-button" href="index.html">← Back to Home</a>
 
       <h2>YCS (formerly ECRN+)</h2>
       <p><a href="https://ymcacolumbus.org/locations/ecrn" target="_blank">YCS</a>, previously known as ECRN+, is part of the YMCA of Central Ohio. It supports families with children who have developmental delays, disabilities, or health care needs—from infancy through early childhood.</p>
@@ -67,24 +68,11 @@
 
       <!-- Additional resource entries can be added here in same style -->
 
-      <hr style="margin-top: 3rem; border: none; border-top: 1px solid #e2e8f0;">
-      <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin-top: 2rem;">
-        <a href="index.html">Home</a> |
-        <a href="first-steps.html">First Steps</a> |
-        <a href="sports.html">Sports & Activities</a> |
-        <a href="groups.html">Groups & Community</a> |
-        <a href="playgrounds.html">Accessible Playgrounds</a> |
-        <a href="camps.html">Camps & Programs</a> |
-        <a href="vacations.html">Travel & Vacations</a> |
-        <a href="representation.html">Limb Difference in Media</a> |
-        <a href="prosthetics.html">Prosthetics & Equipment</a> |
-        <a href="care-teams.html">Care Teams & Providers</a> |
-        <a href="books.html">Books</a> |
-        <a href="resources.html">Support & Community Resources</a> |
-        <a href="surgery.html">Surgery Journey</a
-      </p>
-
+      <nav class="site-footer-nav" data-site-navigation aria-label="Site navigation">
+        <a href="index.html">Home</a>
+      </nav>
     </main>
   </div>
+  <script src="site.js"></script>
 </body>
 </html>
