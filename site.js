@@ -7,15 +7,29 @@
     ["camps.html", "Camps & Programs"],
     ["vacations.html", "Travel & Vacations"],
     ["representation.html", "Movies, TV & Public Figures"],
-    ["toys-and-clothing.html", "Toys & Clothing"],
+    ["toys-and-clothing.html", "Toys, Dolls & Clothing"],
     ["prosthetics.html", "Prosthetics & Equipment"],
     ["care-teams.html", "Care Teams & Providers"],
-    ["books.html", "Books for Kids & Parents"],
+    ["books.html", "Books About Disability & Differences"],
     ["resources.html", "Support & Community Resources"],
     ["surgery.html", "Surgery Journey"]
   ];
 
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const relationships = new Set((link.getAttribute("rel") || "").split(/\s+/).filter(Boolean));
+    relationships.add("noopener");
+    relationships.add("noreferrer");
+    link.setAttribute("rel", Array.from(relationships).join(" "));
+
+    if (!link.querySelector(".visually-hidden")) {
+      const notice = document.createElement("span");
+      notice.className = "visually-hidden";
+      notice.textContent = " (opens in a new tab)";
+      link.append(notice);
+    }
+  });
 
   document.querySelectorAll("[data-site-navigation]").forEach((navigation) => {
     navigation.replaceChildren();
@@ -96,5 +110,37 @@
     backToTop.setAttribute("aria-label", "Back to top");
     backToTop.textContent = "↑";
     document.body.append(backToTop);
+  }
+
+  const ambientVideos = Array.from(document.querySelectorAll("video[autoplay][muted][loop]"));
+  if (ambientVideos.length && "IntersectionObserver" in window) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const visibility = new WeakMap();
+
+    const updatePlayback = (video) => {
+      if (reducedMotion.matches || document.hidden || !visibility.get(video)) {
+        video.pause();
+        return;
+      }
+      video.play().catch(() => {});
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        visibility.set(entry.target, entry.isIntersecting);
+        updatePlayback(entry.target);
+      });
+    }, { rootMargin: "120px 0px" });
+
+    ambientVideos.forEach((video) => {
+      video.muted = true;
+      visibility.set(video, false);
+      observer.observe(video);
+      if (reducedMotion.matches) video.pause();
+    });
+
+    const updateAllVideos = () => ambientVideos.forEach(updatePlayback);
+    reducedMotion.addEventListener?.("change", updateAllVideos);
+    document.addEventListener("visibilitychange", updateAllVideos);
   }
 })();

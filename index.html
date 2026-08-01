@@ -6,6 +6,22 @@
   <meta name="description" content="Adapt Ohio is a family-kept collection of resources, ideas, and firsthand notes about raising a child with a limb difference. Find Ohio programs, adaptive activities, accessible places, prosthetics, and more." />
   <title>Limb Difference Resources, Ideas &amp; Family Experiences in Ohio | Adapt Ohio</title>
   <link rel="canonical" href="https://www.adaptohio.com/" />
+  <meta name="theme-color" content="#0d2a49">
+  <meta property="og:site_name" content="Adapt Ohio">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Limb Difference Resources, Ideas &amp; Family Experiences in Ohio | Adapt Ohio">
+  <meta property="og:description" content="Adapt Ohio is a family-kept collection of resources, ideas, and firsthand notes about raising a child with a limb difference. Find Ohio programs, adaptive activities, accessible places, prosthetics, and more.">
+  <meta property="og:url" content="https://www.adaptohio.com/">
+  <meta property="og:image" content="https://www.adaptohio.com/images/social-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Adapt Ohio: Resources, experiences, and ideas for families">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Limb Difference Resources, Ideas &amp; Family Experiences in Ohio | Adapt Ohio">
+  <meta name="twitter:description" content="Adapt Ohio is a family-kept collection of resources, ideas, and firsthand notes about raising a child with a limb difference. Find Ohio programs, adaptive activities, accessible places, prosthetics, and more.">
+  <meta name="twitter:image" content="https://www.adaptohio.com/images/social-share.png">
+  <meta name="twitter:image:alt" content="Adapt Ohio: Resources, experiences, and ideas for families">
   <!-- Schema.org structured data for Adapt Ohio: Homepage -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://www.adaptohio.com","name":"Adapt Ohio","description":"Adapt Ohio is a family-kept collection of resources, ideas, and firsthand notes about raising a child with a limb difference. Find Ohio programs, adaptive activities, accessible places, prosthetics, and more.","publisher":{"@type":"Organization","name":"Adapt Ohio","logo":{"@type":"ImageObject","url":"https://www.adaptohio.com/images/logo.png"}}}</script>
   <!-- Google tag (gtag.js) -->
@@ -45,6 +61,28 @@
       font-family: 'Inter', sans-serif;
       background-color: var(--gray-bg);
       color: var(--text-dark);
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 100;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 8px 24px rgba(30, 41, 59, 0.2);
+      color: var(--blue-dark);
+      font-weight: 600;
+      text-decoration: none;
+      transform: translateY(-160%);
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      outline: 3px solid #93c5fd;
+      outline-offset: 2px;
+      transform: translateY(0);
     }
 
     header {
@@ -209,6 +247,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+      .skip-link,
       .card,
       .card::after {
         transition: none;
@@ -217,13 +256,14 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header>
     <h1>Adapt Ohio</h1>
     <p>Resources, experiences, and ideas for families of children with limb differences and disabilities</p>
   </header>
 
   <div class="wrapper">
-    <main class="container">
+    <main id="main-content" class="container" tabindex="-1">
       <section class="intro">
         <h2>Why we made this</h2>
         <p>
@@ -272,7 +312,7 @@
           <p>Stories on screen, plus athletes and public figures who help kids feel seen.</p>
         </a>
         <a class="card" href="toys-and-clothing.html">
-          <h3>Toys &amp; Clothing</h3>
+          <h3>Toys, Dolls &amp; Clothing</h3>
           <p>Find dolls, playsets, and apparel that represent limb differences, so kids can see themselves in what they play with and wear.</p>
         </a>
         <a class="card" href="prosthetics.html">
@@ -284,11 +324,11 @@
           <p>Why we chose our current care team and what other medical and prosthetic providers you might consider.</p>
         </a>
         <a class="card" href="books.html">
-          <h3>Books for Kids &amp; Parents</h3>
+          <h3>Books About Disability &amp; Differences</h3>
           <p>Stories that celebrate differences, boost confidence, and help your child feel seen. These are some of the books we've read together and loved.</p>
         </a>
         <a class="card" href="resources.html">
-          <h3>Resources</h3>
+          <h3>Support &amp; Community Resources</h3>
           <p>Organizations and websites we've found helpful along the way. These cover everything from early childhood services to national groups focused on disability and inclusion.</p>
         </a>
         

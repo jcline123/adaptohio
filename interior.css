@@ -21,6 +21,40 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.2);
+  color: var(--blue-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 body > header {
   position: relative;
   overflow: hidden;
@@ -84,6 +118,7 @@ main.container {
 .back-button:focus-visible,
 .page-toc summary:focus-visible,
 .page-toc a:focus-visible,
+.container a:focus-visible,
 .site-footer-nav a:focus-visible,
 .back-to-top:focus-visible {
   outline: 3px solid #93c5fd;
@@ -314,6 +349,7 @@ figcaption {
   }
 
   .back-button,
+  .skip-link,
   .site-footer-nav__links a,
   .back-to-top {
     transition: none;
