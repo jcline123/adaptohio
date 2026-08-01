@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Adapt Ohio is a parent-created guide to navigating life with a child with a limb difference or disability. Explore resources, prosthetics, adaptive sports, accessible parks, and care providers in Ohio." />
-  <title>Parent Guide to Limb Differences & Disability Resources in Ohio | Adapt Ohio</title>
+  <meta name="description" content="Adapt Ohio is a family-kept collection of resources, ideas, and firsthand notes about raising a child with a limb difference. Find Ohio programs, adaptive activities, accessible places, prosthetics, and more." />
+  <title>Limb Difference Resources, Ideas &amp; Family Experiences in Ohio | Adapt Ohio</title>
   <link rel="canonical" href="https://www.adaptohio.com/" />
   <!-- Schema.org structured data for Adapt Ohio: Homepage -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://www.adaptohio.com","name":"Adapt Ohio","description":"Adapt Ohio is a parent-created guide to navigating life with a child with a limb difference or disability. Explore resources, prosthetics, adaptive sports, accessible parks, and care providers in Ohio.","publisher":{"@type":"Organization","name":"Adapt Ohio","logo":{"@type":"ImageObject","url":"https://www.adaptohio.com/images/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://www.adaptohio.com","name":"Adapt Ohio","description":"Adapt Ohio is a family-kept collection of resources, ideas, and firsthand notes about raising a child with a limb difference. Find Ohio programs, adaptive activities, accessible places, prosthetics, and more.","publisher":{"@type":"Organization","name":"Adapt Ohio","logo":{"@type":"ImageObject","url":"https://www.adaptohio.com/images/logo.png"}}}</script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY50L26FKV"></script>
   <script>
@@ -24,7 +24,7 @@
   <!-- Android Icons -->
   <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
   <style>
     :root {
       --blue: #2563eb;
@@ -33,6 +33,7 @@
       --card-border: #e2e8f0;
       --text-dark: #1e293b;
       --text-light: #475569;
+      --blue-dark: #1e40af;
     }
 
     * {
@@ -47,29 +48,48 @@
     }
 
     header {
-      background: linear-gradient(135deg, var(--light-blue), var(--blue));
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 30%),
+        linear-gradient(135deg, var(--light-blue), var(--blue-dark));
       color: white;
-      padding: 4rem 1rem;
+      padding: 5rem 1rem 7rem;
       text-align: center;
     }
 
     header h1 {
-      margin: 0 0 1rem 0;
-      font-size: 3rem;
+      margin: 0 0 0.85rem;
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      letter-spacing: -0.04em;
     }
 
     header p {
       margin: 0;
-      font-size: 1.25rem;
-      max-width: 600px;
+      font-size: clamp(1.1rem, 3vw, 1.35rem);
+      line-height: 1.5;
+      max-width: 640px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .wrapper {
       display: flex;
       justify-content: center;
-      padding: 3rem 1rem;
+      padding: 0 1rem 4rem;
     }
 
     .container {
@@ -78,11 +98,49 @@
     }
 
     .intro {
-      margin-bottom: 3rem;
+      position: relative;
+      margin: -3.5rem auto 3.5rem;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      max-width: 900px;
+      background: white;
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(30, 64, 175, 0.12);
       line-height: 1.6;
       font-size: 1.1rem;
       color: var(--text-light);
+    }
+
+    .intro h2 {
+      margin: 0 0 1rem;
+      color: var(--text-dark);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: -0.02em;
+    }
+
+    .intro p:first-of-type {
+      margin-top: 0;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-heading {
+      margin-bottom: 1.75rem;
       text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.6rem, 4vw, 2.15rem);
+      letter-spacing: -0.025em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.6;
     }
 
     .card-grid {
@@ -92,23 +150,30 @@
     }
 
     .card {
+      position: relative;
       background: white;
-      padding: 1.75rem;
-      border-radius: 12px;
+      padding: 1.75rem 1.75rem 3.5rem;
+      border-radius: 16px;
       border: 1px solid var(--card-border);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.03);
-      transition: all 0.2s ease-in-out;
+      box-shadow: 0 8px 20px rgba(30,41,59,0.04);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      text-align: center;
+      text-align: left;
     }
 
     .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+      transform: translateY(-4px);
+      border-color: #bfdbfe;
+      box-shadow: 0 16px 32px rgba(30,64,175,0.1);
+    }
+
+    .card:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 4px;
     }
 
     .card h3 {
@@ -120,26 +185,76 @@
     .card p {
       margin-bottom: 0;
       font-size: 1rem;
+      line-height: 1.6;
       color: var(--text-light);
+    }
+
+    .card::after {
+      content: '\2192';
+      position: absolute;
+      left: 1.75rem;
+      bottom: 1.35rem;
+      color: var(--blue);
+      font-size: 1.25rem;
+      font-weight: 600;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover::after {
+      transform: translateX(4px);
+    }
+
+    footer {
+      padding: 0 1rem 3rem;
+      color: #64748b;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 4rem 1rem 6rem;
+      }
+
+      .card-grid {
+        gap: 1rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card,
+      .card::after {
+        transition: none;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <span class="eyebrow">Made by Gwen's family in Ohio</span>
     <h1>Adapt Ohio</h1>
-    <p>A family-built guide for navigating life with a child with a disability</p>
+    <p>Things we've found, tried, and saved for the road ahead</p>
   </header>
 
   <div class="wrapper">
     <main class="container">
       <section class="intro">
+        <h2>Why we made this</h2>
         <p>
-          We're the parents of a little girl named Gwendolyn, who was born with fibular hemimelia and apodia. At 9 months old, she had amputation surgeries and now walks, runs, and plays as a bilateral below-knee amputee. When she was born, we had so many questions and very few answers. No one handed us a guide.
+          We're the parents of Gwendolyn, who was born with fibular hemimelia and apodia. She had amputation surgeries at 9 months old and is now a bilateral below-knee amputee who walks, runs, plays, and keeps us busy.
         </p>
         <p>
-          This site is where we're sharing what we've learned so far: from early intervention and adaptive sports to accessible parks and programs. While our experience centers on limb differences, many of these resources will be helpful to families of children with various disabilities. Our hope is that this guide makes your path a little clearer.
+          Adapt Ohio started as a place for us to keep track of things we found along the way: programs Gwen has tried, places our family enjoys, resources that helped, and ideas we want to remember for later. Some are useful now. Others are here for when Gwen is older or when the right time comes.
+        </p>
+        <p>
+          Our experience is centered on limb differences, but a lot of what we've collected may be helpful to other families too. We're not experts, and this isn't a step-by-step plan. It's simply one family's growing collection, shared in case something here helps yours.
         </p>
       </section>
+
+      <div class="section-heading">
+        <h2>Explore what we've collected</h2>
+        <p>Start wherever it makes sense for your family today.</p>
+      </div>
 
       <section class="card-grid">
         <a class="card" href="first-steps.html">
@@ -147,11 +262,11 @@
           <p>What to do after a diagnosis or birth. Programs, referrals, and support systems to connect with early.</p>
         </a>
         <a class="card" href="sports.html">
-          <h3>Sports & Activities</h3>
+          <h3>Sports &amp; Activities</h3>
           <p>Explore sled hockey, dance, and other adaptive programs we've tried and recommend.</p>
         </a>
         <a class="card" href="groups.html">
-          <h3>Groups & Community</h3>
+          <h3>Groups &amp; Community</h3>
           <p>Support groups, local meetups, and online communities that have helped us stay connected.</p>
         </a>
         <a class="card" href="playgrounds.html">
@@ -159,31 +274,31 @@
           <p>Our favorite inclusive playgrounds in Central Ohio where every child can feel included.</p>
         </a>
         <a class="card" href="camps.html">
-          <h3>Camps & Programs</h3>
+          <h3>Camps &amp; Programs</h3>
           <p>Fun and empowering summer and seasonal camps your child might enjoy.</p>
         </a>
         <a class="card" href="vacations.html">
-          <h3>Travel & Vacations</h3>
+          <h3>Travel &amp; Vacations</h3>
           <p>Tips and insights for visiting theme parks, zoos, and planning accessible family trips.</p>
         </a>
         <a class="card" href="representation.html">
-          <h3>Movies, TV & Public Figures</h3>
+          <h3>Movies, TV &amp; Public Figures</h3>
           <p>Stories on screen, plus athletes and public figures who help kids feel seen.</p>
         </a>
         <a class="card" href="toys-and-clothing.html">
-          <h3>Toys & Clothing</h3>
+          <h3>Toys &amp; Clothing</h3>
           <p>Find dolls, playsets, and apparel that represent limb differences, so kids can see themselves in what they play with and wear.</p>
         </a>
         <a class="card" href="prosthetics.html">
-          <h3>Prosthetics & Equipment</h3>
+          <h3>Prosthetics &amp; Equipment</h3>
           <p>Our experiences with different products and providers, what worked, what didn’t, and what we learned.</p>
         </a>
         <a class="card" href="care-teams.html">
-          <h3>Care Teams & Providers</h3>
+          <h3>Care Teams &amp; Providers</h3>
           <p>Why we chose our current care team and what other medical and prosthetic providers you might consider.</p>
         </a>
         <a class="card" href="books.html">
-          <h3>Books for Kids & Parents</h3>
+          <h3>Books for Kids &amp; Parents</h3>
           <p>Stories that celebrate differences, boost confidence, and help your child feel seen. These are some of the books we've read together and loved.</p>
         </a>
         <a class="card" href="resources.html">
@@ -194,5 +309,8 @@
       </section>
     </main>
   </div>
+  <footer>
+    Built by our family and updated as we keep learning.
+  </footer>
 </body>
 </html>
