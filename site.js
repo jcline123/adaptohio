@@ -1,13 +1,15 @@
 (() => {
   const pages = [
     ["first-steps.html", "First Steps"],
+    ["school.html", "School & Education"],
     ["sports.html", "Sports & Activities"],
     ["groups.html", "Groups & Community"],
     ["playgrounds.html", "Accessible Playgrounds"],
     ["camps.html", "Camps & Programs"],
     ["vacations.html", "Travel & Vacations"],
     ["representation.html", "Movies, TV & Public Figures"],
-    ["toys-and-clothing.html", "Toys, Dolls & Clothing"],
+    ["toys-and-clothing.html", "Toys & Dolls"],
+    ["clothing.html", "Clothing"],
     ["prosthetics.html", "Prosthetics & Equipment"],
     ["care-teams.html", "Care Teams & Providers"],
     ["books.html", "Books About Disability & Differences"],

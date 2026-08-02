@@ -18,6 +18,11 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.adaptohio.com/school.html</loc>
+    <lastmod>2026-08-02T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.adaptohio.com/sports.html</loc>
     <lastmod>2026-08-02T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
@@ -74,6 +79,11 @@
   </url>
   <url>
     <loc>https://www.adaptohio.com/toys-and-clothing.html</loc>
+    <lastmod>2026-08-02T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.adaptohio.com/clothing.html</loc>
     <lastmod>2026-08-02T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
