@@ -63,28 +63,6 @@
       color: var(--text-dark);
     }
 
-    .skip-link {
-      position: fixed;
-      top: 0.75rem;
-      left: 0.75rem;
-      z-index: 100;
-      padding: 0.7rem 1rem;
-      border-radius: 8px;
-      background: white;
-      box-shadow: 0 8px 24px rgba(30, 41, 59, 0.2);
-      color: var(--blue-dark);
-      font-weight: 600;
-      text-decoration: none;
-      transform: translateY(-160%);
-      transition: transform 0.2s ease;
-    }
-
-    .skip-link:focus {
-      outline: 3px solid #93c5fd;
-      outline-offset: 2px;
-      transform: translateY(0);
-    }
-
     header {
       position: relative;
       overflow: hidden;
@@ -247,7 +225,6 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .skip-link,
       .card,
       .card::after {
         transition: none;
@@ -256,7 +233,6 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header>
     <h1>Adapt Ohio</h1>
     <p>Resources, experiences, and ideas for families of children with limb differences and disabilities</p>
