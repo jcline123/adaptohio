@@ -485,6 +485,23 @@
       </nav>
     </main>
   </div>
+  <script>
+    document.querySelectorAll('.park-links a[href*="google.com/maps"]').forEach(function (googleLink) {
+      const parkName = googleLink.closest('.playground-card').querySelector('h3').textContent.trim();
+      const locationQuery = new URL(googleLink.href).searchParams.get('query');
+      const appleLink = document.createElement('a');
+
+      appleLink.href = 'https://maps.apple.com/?q=' + encodeURIComponent(locationQuery);
+      appleLink.target = '_blank';
+      appleLink.rel = 'noopener';
+      appleLink.textContent = 'Apple Maps';
+      appleLink.setAttribute('aria-label', 'Open ' + parkName + ' in Apple Maps');
+
+      googleLink.textContent = 'Google Maps';
+      googleLink.setAttribute('aria-label', 'Open ' + parkName + ' in Google Maps');
+      googleLink.before(appleLink);
+    });
+  </script>
   <script src="site.js"></script>
 </body>
 </html>
