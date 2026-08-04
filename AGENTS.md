@@ -191,3 +191,6 @@ stable rule, promote it into the sections above and trim the log.
   card (page structure already separates Gwen-tried from later listings).
 - **2026-08-04** — Always update `sitemap.xml` with page changes (bump `<lastmod>`,
   add/remove URLs as needed). Do not wait to be asked.
+- **2026-08-04** — Expanded `clothing.html` with adaptive footwear brands, tailor pant
+  tips, retailer adaptive clothing, and Pottery Barn Kids adaptive backpacks. Page
+  uses `data-toc="grouped"`.
