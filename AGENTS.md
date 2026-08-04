@@ -113,6 +113,10 @@ clinicians, journalists, or marketers.
   piles, and overly tidy parallel lists of benefits.
 - Keep program blurbs short and specific. Say what it is, who it is for, and
   where to learn more. Match the length and plainness of neighboring cards.
+- When linking to retailers or brands, prefer the specific adaptive collection /
+  product-section URL (or the URL Joshua provides), not the site homepage.
+  Homepages are fine only when the whole site is that product line (e.g. BILLY,
+  Friendly Shoes, RAGS) or a deeper link is broken.
 
 **What to avoid when editing or adding content:**
 - Expert/authority voice, medical advice, or "you should" prescriptions.
@@ -194,3 +198,5 @@ stable rule, promote it into the sections above and trim the log.
 - **2026-08-04** — Expanded `clothing.html` with adaptive footwear brands, tailor pant
   tips, retailer adaptive clothing, and Pottery Barn Kids adaptive backpacks. Page
   uses `data-toc="grouped"`.
+- **2026-08-04** — Clothing retailer links should go to adaptive collection pages, not
+  homepages, when a section URL exists.
