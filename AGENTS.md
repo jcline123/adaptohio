@@ -94,3 +94,40 @@ clinicians, journalists, or marketers.
   ("Gwen loves…", "she's having a lot of fun"). Don't invent interior monologue.
 - Expanding scope into topics the family hasn't lived or researched. If adding a
   resource they haven't used, say so.
+
+### Media assets (images & videos)
+When asked to add photos or videos, process the files before committing — do not
+drop originals in as-is.
+
+**Always:**
+- Optimize for the web (reasonable resolution/bitrate; prefer modern formats
+  when they fit existing pages, e.g. `.webp` where playgrounds already use it,
+  otherwise match neighboring assets on that page).
+- Strip all metadata/EXIF/GPS/camera info from every new image and video before
+  it lands in `images/` (privacy + smaller files). Re-strip if re-exporting.
+- Store media under `images/` and reference with relative paths.
+- Match the markup patterns already used on that page (and prefer patterns
+  shared via `interior.css` / existing pages) so new blocks look consistent.
+
+**Images — match existing markup:**
+- Wrap single photos in `<div class="image-wrapper">` with
+  `<img … loading="lazy" decoding="async">` plus width/height and a short
+  descriptive `alt`, then `<p class="caption">…</p>`.
+- Captions stay short and observational (same voice as the rest of the site).
+- Multi-photo layouts (e.g. Disney collage, Budsies, Set 6) should reuse that
+  page's existing collage structure rather than inventing a new one.
+
+**Hosted ambient videos (family clips in `images/`):**
+- Autoplay ambient loops — **no sound, no controls**. Current pattern:
+  `<video autoplay muted loop playsinline preload="metadata" width="…" height="…" aria-describedby="…-caption">`
+  with a `<source src="images/….mp4" type="video/mp4">` and a matching
+  `.caption` / `aria-describedby` id.
+- Do **not** add `controls`, audio tracks meant to be heard, or click-to-play UI
+  for these clips. `site.js` already finds `video[autoplay][muted][loop]`,
+  forces `muted`, and pauses when off-screen / reduced-motion.
+- Wrap like neighboring videos on the page (`embedded-video-wrapper` /
+  `embedded-video-frame` on prosthetics, `media-collage` figures on sports, etc.).
+
+**Exception:** YouTube embeds on `representation.html` are intentional third-party
+embeds with normal iframe player controls — do not convert those into ambient
+`<video>` tags unless asked.
