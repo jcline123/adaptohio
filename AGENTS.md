@@ -28,3 +28,69 @@ Pages (see `CNAME`).
 - Do NOT open the pages via `file://` — `site.js` derives the current page from the
   URL path, so relative links and the "current page" highlight only behave
   correctly when served over HTTP.
+
+### Voice, tone, and content stance (must match on every edit)
+Adapt Ohio is a family-kept notebook, not a brand, nonprofit brochure, or medical
+authority. Written by Gwen's parents (first person plural: "we" / "our family"),
+about their daughter Gwendolyn / Gwen. Any new copy or edits must sound like the
+same family writing another page of the same site.
+
+**Who they are talking to:** other parents figuring things out — especially early
+on — who want honest, practical experience from someone who has been there. Not
+clinicians, journalists, or marketers.
+
+**Core stance (stated on the homepage and echoed everywhere):**
+- "We're not experts, and this isn't a step-by-step plan. It's simply one family's
+  growing collection."
+- Share what *they* tried, liked, struggled with, or are still figuring out.
+- Own that some things are useful now and some are saved for later.
+- Experience is centered on limb difference (fibular hemimelia / bilateral BK
+  amputation), but many resources may help families of kids with other
+  disabilities too — say that lightly when relevant, don't stretch it.
+- Prefer "might be useful," "worked for us," "we are still looking into it" over
+  absolute advice. Never present the family's choices as the right answer for
+  every family (see `school.html` on private school: personal reasons, not a
+  recommendation to copy).
+
+**Tone:**
+- Warm, plainspoken, calm, and practical. Parent-to-parent.
+- Honest about hard parts (surgery recovery, wound vac in the crib, skin issues,
+  kids asking about Gwen's legs) without being dramatic, clinical, or
+  inspirational-poster.
+- Quietly hopeful and matter-of-fact about Gwen as a kid who walks, runs, plays,
+  and keeps them busy — ability is shown through concrete moments, not slogans.
+- Light humor is okay when it is real and understated (e.g. the literal
+  "band-aid fix," Price is Right keeping a 9-month-old still). Never forced cute.
+- Grateful and specific when thanking people/orgs (Hustle Bike Labs, therapists,
+  schools) — name what they did, don't gush generically.
+- Inclusive language that treats disability as ordinary life. Prefer "limb
+  difference," "prosthetics," "nub," and Gwen's actual activities over euphemism
+  or tragedy framing. Avoid "inspiring," "special needs journey" marketing speak,
+  "differently abled," and charity-poster phrasing.
+
+**How pages are written:**
+- Lead with the family's experience, then add broader Central Ohio / national
+  options. On list pages (sports, groups, resources), Gwen-tried items come
+  first; researched-but-not-yet-tried items are clearly marked as such.
+- Concrete details beat abstractions: ages, locations (Hilliard, Dublin,
+  Columbus), product names (Scout foot, Formula foot, Aquaphor), what changed
+  and why, what still didn't work.
+- Short paragraphs. Plain vocabulary. Conversational contractions ("we've,"
+  "didn't," "it's").
+- Soft recommendations: "we highly recommend," "worth knowing it exists,"
+  "something to consider if…" — never hard sells or affiliate energy.
+- Leave room for other families' paths. Flag when something is still in progress
+  ("we are still learning how the scholarship works," "Gwen has not started
+  kindergarten yet").
+- Photos/videos are real family moments with plain captions, not stock or
+  marketing imagery. Captions stay short and observational.
+
+**What to avoid when editing or adding content:**
+- Expert/authority voice, medical advice, or "you should" prescriptions.
+- Corporate, SEO-stuffed, or brochure copy. Don't turn resource blurbs into
+  generic org boilerplate — keep the family's angle ("why this mattered to us").
+- Over-polished or hyperbolic praise. Understate rather than oversell.
+- Speaking for Gwen's feelings unless the page already does so from observation
+  ("Gwen loves…", "she's having a lot of fun"). Don't invent interior monologue.
+- Expanding scope into topics the family hasn't lived or researched. If adding a
+  resource they haven't used, say so.
