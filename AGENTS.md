@@ -20,6 +20,20 @@ Pages (see `CNAME`).
   editing pages, keep the `pages` array in `site.js` in sync with the actual
   `*.html` files.
 
+### Sitemap (`sitemap.xml`)
+Update `sitemap.xml` in the **same change** whenever page work warrants it. Do this
+automatically; do not wait to be asked.
+
+- **Content edits** to an existing page: bump that URL's `<lastmod>` to today's date
+  (`YYYY-MM-DDT00:00:00+00:00`).
+- **New page**: add a `<url>` entry (homepage stays priority `1.00`; interior pages
+  use `0.80`), and add the page to the `pages` array in `site.js` if it belongs in
+  site navigation.
+- **Rename / remove page**: update or remove the matching sitemap entry (and
+  `site.js` / any in-page links).
+- Shared chrome-only edits (`site.js`, `interior.css`) do not require bumping every
+  URL unless a specific page's content also changed.
+
 ### Lint / test / build
 - None exist. There is no linter, no test suite, and no build command. Do not add
   one unless explicitly asked.
@@ -175,3 +189,5 @@ stable rule, promote it into the sections above and trim the log.
 - **2026-08-04** — Copy rules: no em/en dashes in page copy; keep blurbs plain and
   non-AI-sounding; do not stamp "we have not tried this yet" on every explore-list
   card (page structure already separates Gwen-tried from later listings).
+- **2026-08-04** — Always update `sitemap.xml` with page changes (bump `<lastmod>`,
+  add/remove URLs as needed). Do not wait to be asked.

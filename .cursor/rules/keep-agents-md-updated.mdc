@@ -8,4 +8,5 @@ alwaysApply: true
 - At the start of substantial work, read `AGENTS.md` for site conventions, voice/tone, and media rules.
 - When we make a lasting decision (voice, layout, media, deployment, do/don’t), update `AGENTS.md` in the same change.
 - Add a short dated bullet under **Working log** for session outcomes worth remembering; promote stable rules into the main sections above.
+- When editing pages, update `sitemap.xml` in the same change (bump `<lastmod>`, add/remove URLs). See `AGENTS.md`.
 - Do not invent new tooling, linters, or build steps unless asked — see `AGENTS.md`.
