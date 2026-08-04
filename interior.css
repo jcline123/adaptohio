@@ -142,6 +142,46 @@ main.container {
   text-underline-offset: 0.2em;
 }
 
+.page-toc--grouped > ol {
+  display: block;
+  max-height: min(70vh, 34rem);
+  overflow: auto;
+  padding-right: 1.25rem;
+  overscroll-behavior: contain;
+}
+
+.page-toc--grouped > ol > li {
+  margin-bottom: 0.55rem;
+}
+
+.page-toc--grouped > ol > li > a {
+  color: var(--blue-dark);
+  font-weight: 600;
+}
+
+.page-toc--grouped ol ol {
+  display: block;
+  margin: 0.4rem 0 0.65rem;
+  padding: 0 0 0 1.15rem;
+  list-style: disc;
+}
+
+.page-toc--grouped ol ol ol {
+  list-style: circle;
+  margin-top: 0.3rem;
+  margin-bottom: 0.45rem;
+}
+
+.page-toc--grouped ol ol a {
+  font-size: 0.95em;
+}
+
+main.container h2,
+main.container h3,
+main.container h4 {
+  scroll-margin-top: 1.5rem;
+}
+
 main.container > h2,
 main.container > section > h2 {
   scroll-margin-top: 1.5rem;

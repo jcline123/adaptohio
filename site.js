@@ -61,42 +61,98 @@
   const main = document.querySelector("main.container");
   if (!main) return;
 
-  const headings = Array.from(main.querySelectorAll("h2"));
-  if (headings.length >= 6) {
+  const tocMode = main.getAttribute("data-toc");
+  const sectionHeadings = Array.from(main.querySelectorAll("h2"));
+  const groupedToc = tocMode === "grouped";
+  const tocHeadings = groupedToc
+    ? Array.from(main.querySelectorAll("h2, h3, h4"))
+    : sectionHeadings;
+
+  const assignHeadingId = (heading, index, usedIds) => {
+    let id = heading.id || heading.textContent
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "") || `section-${index + 1}`;
+
+    const baseId = id;
+    let suffix = 2;
+    while (usedIds.has(id) || (document.getElementById(id) && document.getElementById(id) !== heading)) {
+      id = `${baseId}-${suffix}`;
+      suffix += 1;
+    }
+    heading.id = id;
+    usedIds.add(id);
+    return id;
+  };
+
+  const createTocLinkItem = (heading, index, usedIds) => {
+    const id = assignHeadingId(heading, index, usedIds);
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = `#${id}`;
+    link.textContent = heading.textContent.trim();
+    item.append(link);
+    return item;
+  };
+
+  const buildFlatTocList = (headings, usedIds) => {
+    const list = document.createElement("ol");
+    headings.forEach((heading, index) => {
+      list.append(createTocLinkItem(heading, index, usedIds));
+    });
+    return list;
+  };
+
+  const buildGroupedTocList = (headings, usedIds) => {
+    const root = document.createElement("ol");
+    let h2List = null;
+    let h3List = null;
+
+    headings.forEach((heading, index) => {
+      const level = Number(heading.tagName.slice(1));
+      const item = createTocLinkItem(heading, index, usedIds);
+
+      if (level === 2) {
+        root.append(item);
+        h2List = document.createElement("ol");
+        item.append(h2List);
+        h3List = null;
+        return;
+      }
+
+      if (level === 3) {
+        const parent = h2List || root;
+        parent.append(item);
+        h3List = document.createElement("ol");
+        item.append(h3List);
+        return;
+      }
+
+      (h3List || h2List || root).append(item);
+    });
+
+    root.querySelectorAll("ol").forEach((list) => {
+      if (!list.children.length) list.remove();
+    });
+
+    return root;
+  };
+
+  if (groupedToc || sectionHeadings.length >= 6) {
     const usedIds = new Set();
     const tableOfContents = document.createElement("details");
-    tableOfContents.className = "page-toc";
+    tableOfContents.className = groupedToc ? "page-toc page-toc--grouped" : "page-toc";
 
     const summary = document.createElement("summary");
     summary.textContent = "On this page";
     tableOfContents.append(summary);
+    tableOfContents.append(
+      groupedToc
+        ? buildGroupedTocList(tocHeadings, usedIds)
+        : buildFlatTocList(tocHeadings, usedIds)
+    );
 
-    const list = document.createElement("ol");
-    headings.forEach((heading, index) => {
-      let id = heading.id || heading.textContent
-        .toLowerCase()
-        .trim()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "") || `section-${index + 1}`;
-
-      const baseId = id;
-      let suffix = 2;
-      while (usedIds.has(id) || document.getElementById(id)) {
-        id = `${baseId}-${suffix}`;
-        suffix += 1;
-      }
-      heading.id = id;
-      usedIds.add(id);
-
-      const item = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = `#${id}`;
-      link.textContent = heading.textContent;
-      item.append(link);
-      list.append(item);
-    });
-
-    tableOfContents.append(list);
     const backButton = main.querySelector(".back-button");
     if (backButton) {
       backButton.insertAdjacentElement("afterend", tableOfContents);
@@ -105,7 +161,7 @@
     }
   }
 
-  if (headings.length >= 6 || document.documentElement.scrollHeight > 1800) {
+  if (sectionHeadings.length >= 6 || document.documentElement.scrollHeight > 1800) {
     const backToTop = document.createElement("a");
     backToTop.className = "back-to-top";
     backToTop.href = "#top";

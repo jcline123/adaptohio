@@ -13,7 +13,9 @@ Pages (see `CNAME`).
   and `sitemap.xml`. There is nothing to compile or install.
 - `site.js` runs on every page and progressively enhances it: it hardens
   `target="_blank"` links, builds the footer navigation from the `pages` array,
-  injects an "On this page" table of contents on pages with 6+ `<h2>` headings,
+  injects an "On this page" table of contents on pages with 6+ `<h2>` headings
+  (or a nested section/group/program TOC when `main` has `data-toc="grouped"`,
+  used on `sports.html`),
   adds a "Back to top" button on long pages, and lazy-plays ambient videos. When
   editing pages, keep the `pages` array in `site.js` in sync with the actual
   `*.html` files.
@@ -71,7 +73,11 @@ clinicians, journalists, or marketers.
 **How pages are written:**
 - Lead with the family's experience, then add broader Central Ohio / national
   options. On list pages (sports, groups, resources), Gwen-tried items come
-  first; researched-but-not-yet-tried items are clearly marked as such.
+  first; later sections are programs and resources collected for other families
+  to explore. The page intro can explain that split once. Do **not** repeat
+  "we have not tried this yet" (or similar) on every untried card. It gets
+  redundant fast as more listings are added. Only call out tried vs. not-tried
+  when it really helps, or when Joshua asks for it.
 - Concrete details beat abstractions: ages, locations (Hilliard, Dublin,
   Columbus), product names (Scout foot, Formula foot, Aquaphor), what changed
   and why, what still didn't work.
@@ -85,6 +91,15 @@ clinicians, journalists, or marketers.
 - Photos/videos are real family moments with plain captions, not stock or
   marketing imagery. Captions stay short and observational.
 
+**Copy mechanics (site pages):**
+- Do not use em dashes (—) or en dashes (–) in page copy. Use commas, periods,
+  parentheses, or a plain hyphen in compound words when needed.
+- Write like a parent talking to another parent. Avoid AI-sounding cadence:
+  stacked adjectives, brochure phrasing, "inclusive supportive empowering"
+  piles, and overly tidy parallel lists of benefits.
+- Keep program blurbs short and specific. Say what it is, who it is for, and
+  where to learn more. Match the length and plainness of neighboring cards.
+
 **What to avoid when editing or adding content:**
 - Expert/authority voice, medical advice, or "you should" prescriptions.
 - Corporate, SEO-stuffed, or brochure copy. Don't turn resource blurbs into
@@ -92,8 +107,9 @@ clinicians, journalists, or marketers.
 - Over-polished or hyperbolic praise. Understate rather than oversell.
 - Speaking for Gwen's feelings unless the page already does so from observation
   ("Gwen loves…", "she's having a lot of fun"). Don't invent interior monologue.
-- Expanding scope into topics the family hasn't lived or researched. If adding a
-  resource they haven't used, say so.
+- Expanding scope into topics the family hasn't lived or researched without a
+  clear source. For explore-list cards, plain factual blurbs are enough; do not
+  pad them with "we haven't tried this yet" disclaimers by default.
 
 ### Media assets (images & videos)
 When asked to add photos or videos, process the files before committing — do not
@@ -146,3 +162,16 @@ stable rule, promote it into the sections above and trim the log.
   `jcline123/adaptohio` (`main`). Brought `AGENTS.md` in from cloud branch
   `cursor/setup-dev-environment-f0a4` (draft PR #3). Going forward, keep this file
   updated as we work.
+- **2026-08-04** — Sports page uses `data-toc="grouped"` for a nested On this page
+  dropdown (h2 sections → h3 groups → h4 programs). Default TOC on other pages
+  stays flat h2-only at the 6+ heading threshold.
+- **2026-08-04** — Moved Adaptive Ascents out of Community Recreation Programs into
+  its own Adaptive Climbing group. It was only under city rec because of the Aug 3
+  regrouping; it is Vertical Adventures' private gym program (Columbus / Worthington
+  area), not a municipal parks offering.
+- **2026-08-04** — Moved Dublin Dance Centre into a new Adaptive Dance group with
+  Columbus Children's Theatre Seated Dance (link to CCT classes page, not a specific
+  ticket URL). Community Recreation now holds only city parks/rec programs.
+- **2026-08-04** — Copy rules: no em/en dashes in page copy; keep blurbs plain and
+  non-AI-sounding; do not stamp "we have not tried this yet" on every explore-list
+  card (page structure already separates Gwen-tried from later listings).
