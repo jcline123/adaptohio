@@ -204,3 +204,6 @@ stable rule, promote it into the sections above and trim the log.
   personal approval details; linked DODD waivers and FCBDD Medicaid pages.
 - **2026-08-05** — Added cover images under `images/books/` for each title on
   `books.html`.
+- **2026-08-05** — Toys page (`toys-and-clothing.html`) uses books-style product
+  thumbnails under `images/toys/`, with personal photos kept below American Girl
+  and Budsies entries.
