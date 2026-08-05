@@ -313,6 +313,22 @@ figcaption {
   font-weight: 600;
 }
 
+.site-footer-nav__meta {
+  margin: 1.25rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer-nav__meta a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.site-footer-nav__meta a:hover {
+  color: var(--blue);
+}
+
 .back-to-top {
   position: fixed;
   right: 1rem;

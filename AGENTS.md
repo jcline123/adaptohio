@@ -13,12 +13,12 @@ Pages (see `CNAME`).
   and `sitemap.xml`. There is nothing to compile or install.
 - `site.js` runs on every page and progressively enhances it: it hardens
   `target="_blank"` links, builds the footer navigation from the `pages` array,
-  injects an "On this page" table of contents on pages with 6+ `<h2>` headings
-  (or a nested section/group/program TOC when `main` has `data-toc="grouped"`,
-  used on `sports.html`),
-  adds a "Back to top" button on long pages, and lazy-plays ambient videos. When
-  editing pages, keep the `pages` array in `site.js` in sync with the actual
-  `*.html` files.
+  adds a quiet Instagram profile link under that nav, injects an "On this page"
+  table of contents on pages with 6+ `<h2>` headings (or a nested
+  section/group/program TOC when `main` has `data-toc="grouped"`, used on
+  `sports.html`), adds a "Back to top" button on long pages, and lazy-plays
+  ambient videos. When editing pages, keep the `pages` array in `site.js` in
+  sync with the actual `*.html` files.
 
 ### Sitemap (`sitemap.xml`)
 Update `sitemap.xml` in the **same change** whenever page work warrants it. Do this
@@ -117,6 +117,11 @@ clinicians, journalists, or marketers.
   product-section URL (or the URL Joshua provides), not the site homepage.
   Homepages are fine only when the whole site is that product line (e.g. BILLY,
   Friendly Shoes, RAGS) or a deeper link is broken.
+- Contact stays quiet: Instagram (`https://www.instagram.com/adaptohio/`) is the
+  contact path. The homepage footer has a short "Have something to share?" line
+  next to the "Built by our family…" note; every interior page footer includes a
+  simple Instagram link via `site.js`. Link the profile URL, not a DM deep link.
+  Do not add a contact form, support email block, or helpdesk-style framing.
 
 **What to avoid when editing or adding content:**
 - Expert/authority voice, medical advice, or "you should" prescriptions.

@@ -18,20 +18,7 @@
   ];
 
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
-    const relationships = new Set((link.getAttribute("rel") || "").split(/\s+/).filter(Boolean));
-    relationships.add("noopener");
-    relationships.add("noreferrer");
-    link.setAttribute("rel", Array.from(relationships).join(" "));
-
-    if (!link.querySelector(".visually-hidden")) {
-      const notice = document.createElement("span");
-      notice.className = "visually-hidden";
-      notice.textContent = " (opens in a new tab)";
-      link.append(notice);
-    }
-  });
+  const instagramUrl = "https://www.instagram.com/adaptohio/";
 
   document.querySelectorAll("[data-site-navigation]").forEach((navigation) => {
     navigation.replaceChildren();
@@ -56,6 +43,29 @@
     });
 
     navigation.append(links);
+
+    const meta = document.createElement("p");
+    meta.className = "site-footer-nav__meta";
+    const instagram = document.createElement("a");
+    instagram.href = instagramUrl;
+    instagram.target = "_blank";
+    instagram.textContent = "Instagram";
+    meta.append("Find us on ", instagram, ".");
+    navigation.append(meta);
+  });
+
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const relationships = new Set((link.getAttribute("rel") || "").split(/\s+/).filter(Boolean));
+    relationships.add("noopener");
+    relationships.add("noreferrer");
+    link.setAttribute("rel", Array.from(relationships).join(" "));
+
+    if (!link.querySelector(".visually-hidden")) {
+      const notice = document.createElement("span");
+      notice.className = "visually-hidden";
+      notice.textContent = " (opens in a new tab)";
+      link.append(notice);
+    }
   });
 
   const main = document.querySelector("main.container");
