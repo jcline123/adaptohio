@@ -207,3 +207,6 @@ stable rule, promote it into the sections above and trim the log.
 - **2026-08-05** — Toys page (`toys-and-clothing.html`) uses books-style product
   thumbnails under `images/toys/`, with personal photos kept below American Girl
   and Budsies entries.
+- **2026-08-05** — Expanded `books.html` with limb-difference titles first (after
+  existing entries), then broader “being different” titles lower; covers in
+  `images/books/`.
