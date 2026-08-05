@@ -210,3 +210,4 @@ stable rule, promote it into the sections above and trim the log.
 - **2026-08-05** — Expanded `books.html` with limb-difference titles first (after
   existing entries), then broader “being different” titles lower; covers in
   `images/books/`.
+- **2026-08-05** — Expanded `representation.html` with movies/TV and athlete additions from research, plus posters/photos under `images/representation/`.

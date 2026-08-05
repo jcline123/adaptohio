@@ -22,22 +22,16 @@
   <meta name="twitter:description" content="Explore positive representation of limb differences in movies and TV shows, plus real-life athletes and public figures who inspire confidence and inclusion.">
   <meta name="twitter:image" content="https://www.adaptohio.com/images/social-share.png">
   <meta name="twitter:image:alt" content="Adapt Ohio: Resources, experiences, and ideas for families">
-  <!-- Schema.org structured data for Adapt Ohio: Limb Difference Representation page -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.adaptohio.com/representation.html"},"headline":"Limb Difference in Movies, TV & Public Figures | Adapt Ohio","description":"Explore positive representation of limb differences in movies and TV shows, plus real-life athletes and public figures who inspire confidence and inclusion.","author":{"@type":"Person","name":"Joshua Cline"},"publisher":{"@type":"Organization","name":"Adapt Ohio","logo":{"@type":"ImageObject","url":"https://www.adaptohio.com/images/logo.png"}},"datePublished":"2025-06-24","dateModified":"2026-08-01"}</script>
-  <!-- Google tag (gtag.js) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.adaptohio.com/representation.html"},"headline":"Limb Difference in Movies, TV & Public Figures | Adapt Ohio","description":"Explore positive representation of limb differences in movies and TV shows, plus real-life athletes and public figures who inspire confidence and inclusion.","author":{"@type":"Person","name":"Joshua Cline"},"publisher":{"@type":"Organization","name":"Adapt Ohio","logo":{"@type":"ImageObject","url":"https://www.adaptohio.com/images/logo.png"}},"datePublished":"2025-06-24","dateModified":"2026-08-05"}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY50L26FKV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-LY50L26FKV');
   </script>
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.png" type="image/png">
-  <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <!-- Android Icons -->
   <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
@@ -50,9 +44,7 @@
       --text-dark: #1e293b;
       --text-light: #475569;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -65,15 +57,8 @@
       padding: 3rem 1rem;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1rem 4rem;
-    }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    .wrapper { display: flex; justify-content: center; padding: 2rem 1rem 4rem; }
     .container {
       width: 100%;
       max-width: 800px;
@@ -93,40 +78,60 @@
       text-decoration: none;
       font-size: 0.95rem;
     }
-    .back-button:hover {
-      background-color: #1d4ed8;
+    .back-button:hover { background-color: #1d4ed8; }
+    h2 { color: var(--blue); margin-top: 2.5rem; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    p { line-height: 1.6; color: var(--text-light); }
+    .intro { margin-bottom: 0.5rem; }
+    .section-note {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-top: -0.5rem;
     }
-    h2 {
-      color: var(--blue);
+    .media-entry {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 1.25rem 1.5rem;
+      align-items: start;
       margin-top: 2rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--card-border);
     }
-    a {
-      color: var(--blue);
-      text-decoration: none;
+    .media-entry:first-of-type {
+      margin-top: 1.25rem;
+      padding-top: 0;
+      border-top: none;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    p {
-      line-height: 1.6;
-      color: var(--text-light);
-    }
-    .image-wrapper {
-      margin: 1.5rem 0;
-      text-align: center;
-    }
-
-    .image-wrapper img {
-      max-width: 100%;
+    .media-thumb { margin: 0; }
+    .media-thumb img {
+      display: block;
+      width: 100%;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: #f8fafc;
     }
-
-    .caption {
-      font-size: 0.9rem;
-      color: #64748b; /* soft gray */
-      margin-top: 0.5rem;
+    .media-entry.no-thumb {
+      grid-template-columns: 1fr;
+    }
+    .media-body h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--text-dark);
+    }
+    .media-body p:last-child { margin-bottom: 0; }
+    .image-wrapper { margin: 1.5rem 0; text-align: center; }
+    .image-wrapper iframe {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    @media (max-width: 560px) {
+      .media-entry {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 1rem;
+      }
     }
   </style>
   <link rel="stylesheet" href="interior.css">
@@ -140,89 +145,294 @@
     <main id="main-content" class="container" tabindex="-1">
       <a class="back-button" href="index.html">&larr; Back to Home</a>
 
-      <p>Representation matters. Seeing characters and people with limb differences in TV shows and movies helps kids feel seen and understand that they’re not alone.</p>
+      <p class="intro">Representation matters. Seeing characters and people with limb differences in TV shows and movies helps kids feel seen and understand that they’re not alone.</p>
 
-      <h2>Movies & TV</h2>
+      <h2>Movies &amp; TV</h2>
 
-      <h3>Nemo (<a href="https://www.imdb.com/title/tt0266543/" target="_blank">Finding Nemo</a>)</h3>
-      <p>Nemo has a smaller “lucky fin” that sets him apart. His story shows that differences can be strengths.</p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/finding-nemo.jpg" alt="Finding Nemo movie poster" width="257" height="385" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Nemo (<a href="https://www.imdb.com/title/tt0266543/" target="_blank" rel="noopener">Finding Nemo</a>)</h3>
+          <p>Nemo has a smaller “lucky fin” that sets him apart. His story shows that differences can be strengths.</p>
+        </div>
+      </article>
 
-      <h3>Hiccup and Toothless (<a href="https://www.imdb.com/title/tt0892769/" target="_blank">How to Train Your Dragon</a>)</h3>
-      <p>Hiccup and his dragon Toothless use prosthetics, and it’s one of the most empowering parts of the story. Hiccup loses part of his leg in the first movie and wears a prosthetic from that point on. Toothless is missing part of his tail, and the two of them adapt together, learning how to fly as a team. What’s especially cool is that this isn’t treated as a sad or dramatic plot point. It’s just part of who they are. Their prosthetics evolve over the series as Hiccup designs new versions, not because something is wrong, but because that’s what inventors and heroes do. They’re strong, capable, and inspiring, without needing to “overcome” anything.</p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/how-to-train-your-dragon.jpg" alt="How to Train Your Dragon movie poster" width="220" height="327" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Hiccup and Toothless (<a href="https://www.imdb.com/title/tt0892769/" target="_blank" rel="noopener">How to Train Your Dragon</a>)</h3>
+          <p>Hiccup and his dragon Toothless use prosthetics, and it’s one of the most empowering parts of the story. Hiccup loses part of his leg in the first movie and wears a prosthetic from that point on. Toothless is missing part of his tail, and the two of them adapt together, learning how to fly as a team. What’s especially cool is that this isn’t treated as a sad or dramatic plot point. It’s just part of who they are. Their prosthetics evolve over the series as Hiccup designs new versions, not because something is wrong, but because that’s what inventors and heroes do. They’re strong, capable, and inspiring, without needing to “overcome” anything.</p>
+        </div>
+      </article>
 
-      <h3>Massimo Marcovaldo (<a href="https://www.imdb.com/title/tt12801262/" target="_blank">Luca</a>)</h3>
-      <p>Massimo, Giulia’s father, was born with one arm. He’s a fisherman and cook and one of the strongest characters in the movie, both physically and emotionally.</p>
-      
-      <h3>Roz (<a href="https://www.imdb.com/title/tt29623480/" target="_blank">The Wild Robot</a>)</h3>
-      <p>
-      Roz is the main character in <em>The Wild Robot</em>, an animated film based on the bestselling book by Peter Brown. After washing up on a remote island, Roz learns to survive and build relationships with the animals around her. At one point in the story, Roz's leg breaks off, and the animals work together to help her replace it with a wooden leg. This moment highlights adaptation, community, and resilience, offering a gentle and meaningful metaphor for limb difference. Roz’s journey is both emotional and inspiring, making her a powerful character for children to connect with.
-      </p>
-      
-      <h3>Echo (<a href="https://www.imdb.com/title/tt13966962/" target="_blank">Echo</a>) and Bucky Barnes (<a href="https://www.imdb.com/title/tt1843866/" target="_blank">Captain America: The Winter Soldier</a>)Marvel Cinematic Universe</h3>
-      <p>Echo, also known as Maya Lopez, is a Native American, deaf, and amputee superhero introduced in the <em>Hawkeye</em> series. She’s played by Alaqua Cox, an actress who is deaf and an amputee herself, bringing an incredible level of authenticity and representation to the role. Echo’s character is fiercely independent and strong. She uses a prosthetic leg, she fights with skill and precision, stands toe to toe with major characters, and leads her own story. Seeing a real amputee in such a dynamic Marvel role is incredibly meaningful for kids who rarely see heroes who look like them on screen.</p>
-      <p>Bucky Barnes, also known as the Winter Soldier, is another example of a powerful character who uses a prosthetic arm. After losing his left arm, he’s given a mechanical replacement that becomes part of his identity as both a feared assassin and later a redeemed hero. What’s especially impactful is that Bucky’s story doesn’t frame the prosthetic as a weakness. In fact, it’s often portrayed as a strength. Over the course of the series, we see him learning to regain control of his life, identity, and relationships. His arm evolves with him, from a tool of control to something he uses as a force for good. Both Bucky and Echo show that having a limb difference doesn’t limit a person’s ability to lead, fight, and protect others.</p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/luca.jpg" alt="Luca movie poster" width="250" height="370" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Massimo Marcovaldo (<a href="https://www.imdb.com/title/tt12801262/" target="_blank" rel="noopener">Luca</a>)</h3>
+          <p>Massimo, Giulia’s father, was born with one arm. He’s a fisherman and cook and one of the strongest characters in the movie, both physically and emotionally.</p>
+        </div>
+      </article>
 
-      <h3>Ginkgo (<a href="https://www.imdb.com/title/tt2948562/" target="_blank">Tumble Leaf</a>)</h3>
-      <p>Ginkgo is a cheerful crab with a wooden prosthetic claw. His calm demeanor and problem-solving skills help show that differences are part of everyday life.</p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/the-wild-robot.jpg" alt="The Wild Robot movie poster" width="251" height="397" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Roz (<a href="https://www.imdb.com/title/tt29623480/" target="_blank" rel="noopener">The Wild Robot</a>)</h3>
+          <p>Roz is the main character in <em>The Wild Robot</em>, an animated film based on the bestselling book by Peter Brown. After washing up on a remote island, Roz learns to survive and build relationships with the animals around her. At one point in the story, Roz's leg breaks off, and the animals work together to help her replace it with a wooden leg. This moment highlights adaptation, community, and resilience, offering a gentle and meaningful metaphor for limb difference.</p>
+        </div>
+      </article>
 
-      <h3>Luna (<a href="https://www.imdb.com/title/tt33395815/" target="_blank">An Almost Christmas Story</a>)</h3>
-      <p>Luna is a young girl with a limb difference featured in this 2023 Disney+ holiday short. Her story brings disability representation to seasonal family viewing.</p>
-      
-      <h3>Finn (<a href="https://www.imdb.com/title/tt1305826/" target="_blank">Adventure Time</a>)</h3>
-      <p>In the rich and surreal world of <em>Adventure Time</em>, Finn’s story includes a recurring theme where he loses his arm, not just once, but across multiple timelines and alternate realities. Whether it's the Finn we follow in the main story, or future and alternate versions like Farmworld Finn or Prismo’s visions, each one eventually ends up missing an arm. At one point, Finn even receives a mechanical replacement. Instead of focusing on loss, the show treats this thread as part of his destiny and growth. He continues to be brave, compassionate, and adventurous, with or without his arm. It’s a powerful and subtle message that change doesn’t diminish who you are, it’s just another part of the journey.</p>
-      
-      <h3>Ballister Boldheart (<a href="https://www.imdb.com/title/tt19500164/" target="_blank">Nimona</a>)</h3>
-      <p>
-        Ballister, once a celebrated knight, returns in <em>Nimona</em> with a sleek prosthetic arm and a complicated public reputation. He’s thoughtful, steady, and unexpectedly funny, a grounded counterbalance to Nimona’s chaos. His limb difference is just one part of a richly layered character who’s navigating loyalty, trust, and what it means to be a hero on his own terms.
-      </p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/echo-marvel.jpg" alt="Echo series logo" width="415" height="227" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Echo (<a href="https://www.imdb.com/title/tt13966962/" target="_blank" rel="noopener">Echo</a>)</h3>
+          <p>Echo, also known as Maya Lopez, is a Native American, deaf, and amputee superhero introduced in the <em>Hawkeye</em> series. She’s played by Alaqua Cox, an actress who is deaf and an amputee herself. Echo uses a prosthetic leg, fights with skill, and leads her own story. Seeing a real amputee in a Marvel role means a lot for kids who rarely see heroes who look like them.</p>
+        </div>
+      </article>
 
-      <h3>Star Wars Characters (<a href="https://www.imdb.com/title/tt0076759/" target="_blank">Star Wars</a>)</h3>
-      <p>Characters like Luke Skywalker, Anakin Skywalker, and Darth Maul all have prosthetic limbs, showing that even in a galaxy far, far away, limb difference is part of the journey.</p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/winter-soldier.jpg" alt="Captain America: The Winter Soldier movie poster" width="260" height="384" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Bucky Barnes (<a href="https://www.imdb.com/title/tt1843866/" target="_blank" rel="noopener">Captain America: The Winter Soldier</a>)</h3>
+          <p>Bucky Barnes, also known as the Winter Soldier, uses a prosthetic arm after losing his left arm. His story doesn’t frame the prosthetic as a weakness. Over the series, we see him regain control of his life and relationships, and his arm evolves with him from a tool of control to something he uses as a force for good.</p>
+        </div>
+      </article>
 
-      <h3>Della Duck (<a href="https://www.imdb.com/title/tt5531466/" target="_blank">DuckTales 2017</a>)</h3>
-      <p>Della, Donald Duck’s sister, has a robotic prosthetic leg after being stranded on the moon. She’s adventurous and confident.</p>
-      
-      <h3>Anthony Robles (<a href="https://www.imdb.com/title/tt3864060/" target="_blank">Unstoppable</a>)</h3>
-      <p>This film tells the true story of Anthony Robles, who was born with only one leg and became an NCAA wrestling champion. The movie portrays his journey from high school wrestling to winning a national title at Arizona State University. Anthony's determination and resilience are central to the story, highlighting how he navigated challenges both on and off the mat. His physical difference is presented as part of his identity, not a limitation, showcasing his strength and perseverance.</p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/tumble-leaf.jpg" alt="Tumble Leaf logo" width="273" height="178" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Ginkgo (<a href="https://www.imdb.com/title/tt2948562/" target="_blank" rel="noopener">Tumble Leaf</a>)</h3>
+          <p>Ginkgo is a cheerful crab with a wooden prosthetic claw. His calm demeanor and problem-solving skills help show that differences are part of everyday life.</p>
+        </div>
+      </article>
 
-      <h3>Paralympic athletes (<a href="https://www.imdb.com/title/tt10851618/" target="_blank">Rising Phoenix</a>)</h3>
-      <p>This documentary profiles nine Paralympic athletes from around the world, including individuals with limb differences. It delves into their personal stories and the history of the Paralympic Games, illustrating how these athletes have overcome various challenges to compete at the highest levels. The film emphasizes their athleticism, dedication, and the broader impact of the Paralympic movement on perceptions of disability and ability.</p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/almost-christmas-story.jpg" alt="An Almost Christmas Story poster" width="261" height="382" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Luna (<a href="https://www.imdb.com/title/tt33395815/" target="_blank" rel="noopener">An Almost Christmas Story</a>)</h3>
+          <p>Luna is a young girl with a limb difference featured in this 2023 Disney+ holiday short. Her story brings disability representation to seasonal family viewing.</p>
+        </div>
+      </article>
 
-      <h2>Athletes & Representation</h2>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/adventure-time.jpg" alt="Adventure Time Tree House" width="800" height="571" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Finn (<a href="https://www.imdb.com/title/tt1305826/" target="_blank" rel="noopener">Adventure Time</a>)</h3>
+          <p>In <em>Adventure Time</em>, Finn’s story includes a recurring theme where he loses his arm, across multiple timelines and alternate realities. At one point, Finn even receives a mechanical replacement. Instead of focusing on loss, the show treats this as part of his growth. He continues to be brave, compassionate, and adventurous, with or without his arm.</p>
+        </div>
+      </article>
 
-      <h3>Jessica Long</h3>
-      <p>
-        Jessica Long is one of the most decorated Paralympic swimmers of all time. Born in Siberia and adopted by an American family, she had both legs amputated below the knee at 18 months old. Her strength, perseverance, and talent have made her a role model to many families. She has competed in multiple Paralympic Games and won dozens of medals.  
-        Follow her on  
-        <a href="https://www.instagram.com/jessicatatianalong/" target="_blank">Instagram</a> and  
-        <a href="https://www.tiktok.com/@jessicatatianalong" target="_blank">TikTok</a>.
-      </p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/nimona.jpg" alt="Nimona movie poster" width="260" height="385" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Ballister Boldheart (<a href="https://www.imdb.com/title/tt19500164/" target="_blank" rel="noopener">Nimona</a>)</h3>
+          <p>Ballister, once a celebrated knight, returns in <em>Nimona</em> with a sleek prosthetic arm and a complicated public reputation. He’s thoughtful, steady, and unexpectedly funny. His limb difference is just one part of a richly layered character who’s navigating loyalty, trust, and what it means to be a hero on his own terms.</p>
+        </div>
+      </article>
 
-      <h3>Kendra Herber</h3>
-      <p>
-        Kendra was born with fibular hemimelia and became an amputee at age two. She is a paratriathlete, model, teacher, and author, and she now competes in para-standing tennis. Her advocacy and openness about limb difference and body image are empowering to many.  
-        Find her on  
-        <a href="https://www.instagram.com/kendra.herber/" target="_blank">Instagram</a>.
-      </p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/star-wars.jpg" alt="Star Wars movie poster" width="252" height="385" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Star Wars Characters (<a href="https://www.imdb.com/title/tt0076759/" target="_blank" rel="noopener">Star Wars</a>)</h3>
+          <p>Characters like Luke Skywalker, Anakin Skywalker, and Darth Maul all have prosthetic limbs, showing that even in a galaxy far, far away, limb difference is part of the journey.</p>
+        </div>
+      </article>
 
-      <h3>Hunter Woodhall</h3>
-      <p>
-        Hunter is a double below-knee amputee sprinter and Paralympic medalist. He made history as the first double-amputee to earn a Division I NCAA scholarship. Hunter and his wife, Olympian Tara Davis-Woodhall, share their lives and athletic journeys together.  
-        You can follow them on  
-        <a href="https://www.instagram.com/thewoodhalls/" target="_blank">Instagram</a>.
-      </p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/ducktales.jpg" alt="DuckTales 2017 logo" width="800" height="450" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Della Duck (<a href="https://www.imdb.com/title/tt5531466/" target="_blank" rel="noopener">DuckTales 2017</a>)</h3>
+          <p>Della, Donald Duck’s sister, has a robotic prosthetic leg after being stranded on the moon. She’s adventurous and confident.</p>
+        </div>
+      </article>
 
-      <h3>Jim Abbott</h3>
-      <p>
-        Jim Abbott was born without a right hand and became a Major League pitcher who threw a no-hitter in 1993. He played ten seasons in the MLB and later became a motivational speaker, sharing his story of resilience and adaptation.  
-        You can follow him here:  
-        <a href="https://twitter.com/jabbottum31" target="_blank">X</a>
-      </p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/unstoppable.jpg" alt="Unstoppable movie poster" width="258" height="387" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Anthony Robles (<a href="https://www.imdb.com/title/tt3864060/" target="_blank" rel="noopener">Unstoppable</a>)</h3>
+          <p>This film tells the true story of Anthony Robles, who was born with only one leg and became an NCAA wrestling champion. The movie follows his journey from high school wrestling to winning a national title at Arizona State. His physical difference is presented as part of his identity, not a limitation.</p>
+        </div>
+      </article>
 
-      <h2>Inspirational Paralympic Commercials</h2>
-      <p>
-        These Toyota commercials honoring Paralympic athletes left a huge impression on us as parents. They highlight the courage, resilience, and heart behind every journey.
-      </p>
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/rising-phoenix.jpg" alt="Rising Phoenix documentary poster" width="259" height="384" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Paralympic athletes (<a href="https://www.imdb.com/title/tt10851618/" target="_blank" rel="noopener">Rising Phoenix</a>)</h3>
+          <p>This documentary profiles nine Paralympic athletes from around the world, including individuals with limb differences. It shares their personal stories and the history of the Paralympic Games, and shows how these athletes compete at the highest levels.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/best-foot-forward.jpg" alt="Best Foot Forward Apple TV series poster" width="800" height="450" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Best Foot Forward (<a href="https://www.apple.com/tv-pr/originals/best-foot-forward/" target="_blank" rel="noopener">Apple TV+</a>)</h3>
+          <p>TV-G. Good for older elementary and tweens. Follows Josh Dubin, a 12-year-old who uses a prosthetic leg, as he moves from homeschool to public school. It’s about friendships, family, middle-school mishaps, and Josh wanting to be known as a whole person, not only as the kid with a prosthetic. Based on Josh Sundquist’s memoir.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/marvels-hero-project.jpg" alt="Marvel’s Hero Project logo" width="800" height="416" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>“Sensational Jordan” (<a href="https://press.disneyplus.com/disney-plus/marvels-hero-project/episodic/episode1" target="_blank" rel="noopener">Marvel’s Hero Project</a>)</h3>
+          <p>Family viewing. In this episode, Jordan Reeves is recognized for using her experience with an upper-limb difference to invent and advocate for more inclusive design. She’s shown as a young inventor and leader, not only through sports.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/pip-and-posy.jpg" alt="Pip and Posy characters" width="600" height="600" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Becca (<a href="https://www.reach.org.uk/news/pip-posy-as-seen-on-tv" target="_blank" rel="noopener">Pip &amp; Posy’s Treehouse Mystery</a>)</h3>
+          <p>Preschool. Becca is a cheerful friend with an upper-limb difference who rides a bike, hangs out with friends, and helps solve a mystery. Her limb difference is visible and mentioned naturally, but it’s not the focus of the story. The character was developed with disability consultant Cerrie Burnell and performed by Sophie Ireland, a young actor with an upper-limb difference. Availability can vary by country.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/soul-surfer.jpg" alt="Soul Surfer movie poster" width="259" height="383" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Soul Surfer (<a href="https://www.sonypictures.com/movies/soulsurfer" target="_blank" rel="noopener">Sony Pictures</a>)</h3>
+          <p>Rated PG. Parent preview recommended for the shark attack, medical scenes, and strong faith themes. The true story of teenage surfer Bethany Hamilton, who lost an arm in a shark attack and returned to competitive surfing. The movie shows her as an athlete, daughter, friend, and person of faith.</p>
+        </div>
+      </article>
+
+      <h2>Athletes &amp; Public Figures</h2>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/grace-norman.jpg" alt="Grace Norman competing" width="800" height="533" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Grace Norman (<a href="https://www.paralympic.org/grace-norman" target="_blank" rel="noopener">Paralympic profile</a>)</h3>
+          <p>Grace Norman of Jamestown, Ohio, is a three-time Paralympian and four-time Paralympic medalist. She competes in paratriathlon and para-cycling with a prosthetic leg and has represented Ohio on the world stage since she was a teenager.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/jessica-long.jpg" alt="Jessica Long" width="800" height="533" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Jessica Long</h3>
+          <p>Jessica Long is one of the most decorated Paralympic swimmers of all time. Born in Siberia and adopted by an American family, she had both legs amputated below the knee at 18 months old. She has competed in multiple Paralympic Games and won dozens of medals. Follow her on <a href="https://www.instagram.com/jessicatatianalong/" target="_blank" rel="noopener">Instagram</a> and <a href="https://www.tiktok.com/@jessicatatianalong" target="_blank" rel="noopener">TikTok</a>.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/carson-pickett.jpg" alt="Carson Pickett" width="800" height="803" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Carson Pickett (<a href="https://www.ussoccer.com/players/wnt/carson-pickett" target="_blank" rel="noopener">U.S. Soccer</a>)</h3>
+          <p>Carson Pickett is a professional soccer defender who was born without her left forearm. In 2022, she became the first player with a limb difference to appear for the U.S. Women’s National Team. A clear example of limb difference in a mainstream team sport many kids already play.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/ezra-frech.jpg" alt="Ezra Frech" width="308" height="388" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Ezra Frech (<a href="https://www.teamusa.com/profiles/ezra-frech-1153648" target="_blank" rel="noopener">Team USA</a>)</h3>
+          <p>Ezra Frech is a Paralympic sprinter and high jumper who was born with congenital limb differences affecting an arm and a leg. He won gold in both the 100 meters and high jump at the Paris 2024 Paralympic Games. Ezra and his family have also helped build adaptive sports programs for kids and adults.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/sheetal-devi.jpg" alt="Sheetal Devi" width="800" height="531" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Sheetal Devi (<a href="https://www.paralympic.org/sheetal-devi" target="_blank" rel="noopener">Paralympic profile</a>)</h3>
+          <p>Sheetal Devi is an Indian para-archer who was born without arms and shoots using her feet and upper body. She won a bronze medal in the mixed-team compound event at the Paris 2024 Paralympic Games. Her technique shows kids that athletes can approach the same sport in many different ways.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/hunter-woodhall.jpg" alt="Hunter Woodhall" width="800" height="1344" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Hunter Woodhall</h3>
+          <p>Hunter is a double below-knee amputee sprinter and Paralympic medalist. He made history as the first double-amputee to earn a Division I NCAA scholarship. Hunter and his wife, Olympian Tara Davis-Woodhall, share their lives and athletic journeys together. You can follow them on <a href="https://www.instagram.com/thewoodhalls/" target="_blank" rel="noopener">Instagram</a>.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/jim-abbott.jpg" alt="Jim Abbott" width="496" height="633" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Jim Abbott</h3>
+          <p>Jim Abbott was born without a right hand and became a Major League pitcher who threw a no-hitter in 1993. He played ten seasons in the MLB and later became a speaker, sharing his story of adaptation. You can follow him on <a href="https://twitter.com/jabbottum31" target="_blank" rel="noopener">X</a>.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/amy-purdy.jpg" alt="Amy Purdy in Team USA gear on a snowboard" width="800" height="533" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Amy Purdy (<a href="https://www.teamusa.com/profiles/amy-purdy-803389" target="_blank" rel="noopener">Team USA</a>)</h3>
+          <p>Amy Purdy is a three-time Paralympic snowboarding medalist who uses bilateral below-knee prostheses. She has also competed on <em>Dancing with the Stars</em> and worked as an actor, model, and speaker, giving kids an example that combines athletics and performing arts.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/oksana-masters.jpg" alt="Oksana Masters" width="800" height="744" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Oksana Masters (<a href="https://www.teamusa.com/profiles/oksana-masters-803196" target="_blank" rel="noopener">Team USA</a>)</h3>
+          <p>Oksana Masters is a multisport Paralympian who has competed in rowing, cycling, cross-country skiing, and biathlon. She has limb differences affecting her hands and legs and has won medals in both the Summer and Winter Paralympic Games.</p>
+        </div>
+      </article>
+
+      <article class="media-entry">
+        <div class="media-thumb">
+          <img src="images/representation/matt-stutzman.jpg" alt="Matt Stutzman" width="800" height="533" loading="lazy" decoding="async">
+        </div>
+        <div class="media-body">
+          <h3>Matt Stutzman (<a href="https://www.paralympic.org/matt-stutzman" target="_blank" rel="noopener">Paralympic profile</a>)</h3>
+          <p>Matt Stutzman is a Paralympic archery champion who was born without arms and shoots a compound bow using his feet. He won gold at the Paris 2024 Paralympic Games and has helped encourage younger para-archers, including Sheetal Devi.</p>
+        </div>
+      </article>
+
+      <h2>Paralympic Commercials</h2>
+      <p class="section-note">These Toyota commercials honoring Paralympic athletes left a big impression on us as parents.</p>
 
       <div class="image-wrapper">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Pr3jR2keirk?si=Whs6h7T6S7J4aFEy" title="Toyota Paralympic Ad - Jessica Long" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -232,14 +442,6 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/34PVFNl91ao?si=rG78GIETfpK8JjOR" title="Toyota Paralympic Ad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
-      <!-- Template Section for Future Additions -->
-      <!--
-      <h3>New Title</h3>
-      <p>
-        Add your note about the new book, character, or show here. Include a link if possible.
-      </p>
-      -->
-      
       <nav class="site-footer-nav" data-site-navigation aria-label="Site navigation">
         <a href="index.html">Home</a>
       </nav>
