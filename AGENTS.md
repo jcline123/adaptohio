@@ -200,3 +200,7 @@ stable rule, promote it into the sections above and trim the log.
   uses `data-toc="grouped"`.
 - **2026-08-04** — Clothing retailer links should go to adaptive collection pages, not
   homepages, when a section URL exists.
+- **2026-08-05** — Softened FCBDD resources copy; explained DD waivers/Medicaid without
+  personal approval details; linked DODD waivers and FCBDD Medicaid pages.
+- **2026-08-05** — Added cover images under `images/books/` for each title on
+  `books.html`.
