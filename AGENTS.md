@@ -217,3 +217,4 @@ stable rule, promote it into the sections above and trim the log.
   `images/books/`.
 - **2026-08-05** — Expanded `representation.html` with movies/TV and athlete additions from research, plus posters/photos under `images/representation/`.
 - **2026-08-14** — Sports page: folded Gwen-tried write-ups into sport sections (dance, baseball, soccer, etc.) instead of a separate “tried” block at the top. Miracle League of Dublin and Miracle League of New Albany are listed separately. Shane Center added under horseback riding. Turnstone (Fort Wayne) added under statewide / nearby directories.
+- **2026-08-14** — Groups: renamed Ohio section to Ohio & Nearby; added The Amputee Center (Parkersburg, WV) after Nub Club in the same plain listing style.
