@@ -230,6 +230,7 @@ main.container a:not(.back-button):not(.back-to-top) {
 main.container > video,
 main.container iframe {
   max-width: 100%;
+  height: auto;
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(30, 41, 59, 0.09);
 }
